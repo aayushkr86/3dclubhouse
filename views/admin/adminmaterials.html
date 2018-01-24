@@ -1,0 +1,113 @@
+<% include adminheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Materials
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Materials</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>
+                        <li><a id="view-all-materials-list" href="#viewProducts" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addProducts">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="materialName" class="col-sm-2 control-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="materialName" placeholder="Material" value="<%= materialName %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="materialDesc" class="col-sm-2 control-label">Material Description</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="materialDesc" placeholder="Description"value="<%= materialDesc %>" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="materialCost" class="col-sm-2 control-label">Material Cost per meter</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="materialCost" placeholder="Cost per Meter" value="<%= materialCost %>" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="materialWeight" class="col-sm-2 control-label">Material Weight per meter</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="materialWeight" placeholder="Weight per Meter" value="<%= materialWeight %>" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="avMaterialColors" class="col-sm-2 control-label">Choose available colors</label>
+                                    <a href="/admin/admincolors">Tap to add color</a>
+                                    <div id="avMaterialColors" class="container" avcolors="<%= colors %>">
+                                        <span style="margin-right: 10px">
+                                            <input type="checkbox" name="chk_group" value="value1" /><label style="color: #0dbae8">Value</label><input class="jscolor" value="ab2567">
+                                  </span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button id="materials-submit" isEdit="<%= isEdit %>" materialId="<%= pkMaterialId %>" type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="viewProducts">
+
+                            <div class="box">
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Material Name</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="material-list-container">
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html%>

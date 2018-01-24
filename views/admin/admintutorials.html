@@ -1,0 +1,133 @@
+<% include adminheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Tutorials
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Tutorials</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>
+                        <li><a id="view-products" href="#viewProducts" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addProducts">
+                            <div class="form-horizontal" id="pkProductId" tutorialId="<%= pkTutorialId %>">
+                                <div class="form-group">
+                                    <label id="fkCategoryId" tutorialCatId="<%= fkTutorialCatId %>" tutorialCategoryName="<%= tutorialCategoryName %>" for="selectCategory" class="col-sm-2 control-label">Category</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectTutCategory" id="selectTutCategory" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tutorialTitle" class="col-sm-2 control-label">Name</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="tutorialTitle" placeholder="tutorialTitle" value="<%= tutorialTitle %>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tutorialDesc" class="col-sm-2 control-label">Description</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="tutorialDesc" placeholder="Description"><%= tutorialDesc %></textarea>
+                                    </div>
+                                </div>
+                                <div id="tuto-existingImages-container" class="form-group">
+                                    <label class="col-sm-2 control-label">Uploaded Files</label>
+
+                                    <div id="tuto-existingImages" class="col-sm-10" >
+                                        <!--<div class="col-sm-2 img-col">-->
+                                        <!--<div class="img-wrap">-->
+                                        <!--<span class="close">&times;</span>-->
+                                        <!--<img class="img-wrap_responsive" src="https://www.phoca.cz/images/stories/gimp/3-save-icons.png" data-id="123">-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="col-sm-2 img-col">-->
+                                        <!--<div class="img-wrap">-->
+                                        <!--<span class="close">&times;</span>-->
+                                        <!--<img class="img-wrap_responsive" src="https://www.designbrooklyn.com/images/opt/gimp_fileextension.png" data-id="103">-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="tut-productimg-loaded" tutorialResources="<%= tutorialResources %>" for="tutorialsImagesArray" class="col-sm-2 control-label">Choose Files (Maximum File Size is 3MB)</label>
+                                    <div class="col-sm-10">
+                                        <div id="tutorialsImagesArray">Upload</div>
+                                        <button id="tuto-addNewLink" class="btn btn-primary">Tap to add external links</button>
+                                    </div>
+                                    <!-- /col-sm-10 -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="tuto-ext-link" class="col-sm-2 control-label"></label>
+                                    <div id="tuto-ext-link" class="col-sm-10"></div>
+                                </div>
+                                <br><br>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button isEdit="<%= isEdit %>" tutorialId="<%= pkTutorialId %>" id="tutorialInsert" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="viewProducts">
+
+                            <div class="box">
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Tile</th>
+                                            <th>Category</th>
+                                            <th>Description</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tuto-product-list-container">
+
+                                        </tbody>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html %>

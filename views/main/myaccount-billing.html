@@ -1,0 +1,173 @@
+<% include header.html %>  		
+		<!-- MAIN -->
+
+		<main class="site-main shopping-cart">
+
+            <div class="container">
+
+                <ol class="breadcrumb-page">
+
+                    <li><a href="/">Home </a></li>
+
+                    <li class="active"><a href="#">My Account</a></li>
+
+                </ol>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-3 padding-left-5">
+
+                        <div class="order-summary">
+
+                            <h4 class="title-shopping-cart">Orders</h4>
+
+                            <div class="checkout-element-content">
+
+                                <li>
+                                    <a href="/myaccount-orders">My Orders</a>
+                                </li>
+
+                            </div>
+
+                        </div>
+
+                        <div class="order-summary">
+
+                            <h4 class="title-shopping-cart">Payments</h4>
+
+                            <div class="checkout-element-content">
+
+                                <li>
+                                    <a href="/myaccount-paytm">Paytm</a>
+                                </li>
+
+                            </div>
+
+                        </div>
+
+                        <div class="order-summary">
+
+                            <h4 class="title-shopping-cart">Addresses</h4>
+
+                            <div class="checkout-element-content">
+
+                                <li>
+                                    <a href="/myaccount-shipping">Shipping Address</a>
+                                </li>
+                                <li>
+                                    <a href="/myaccount-billing">Billing Address</a>
+                                </li>
+
+                            </div>
+
+                        </div>
+
+                        <div class="order-summary">
+
+                            <h4 class="title-shopping-cart">Settings</h4>
+
+                            <div class="checkout-element-content">
+
+                                <li>
+                                    <a href="/myaccount-password">Change Password</a>
+                                </li>
+                                <li>
+                                    <a href="/myaccount-contact">Update Contact Info</a>
+                                </li>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-9">
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">First Name*</label>
+
+                                <input type="text" class="form-control" id="ship-firstName" placeholder="Your name" value="<%= firstName %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">Last Name*</label>
+
+                                <input type="text" class="form-control" id="ship-lastName" placeholder="Your last name" value="<%= lastName %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">Email Addreess:</label>
+
+                                <input  type="email" class="form-control" id="ship-emailId" placeholder="Type your email" value="<%= shipEmailId %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">Mobile number*</label>
+
+                                <input id="ship-mobile" type="text" class="form-control" placeholder="10 digits format" value="<%= shipMobileNumber %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">Address:</label>
+
+                                <input id="ship-address" type="text" class="form-control" placeholder="Address" value="<%= address %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">City*</label>
+
+                                <input id="ship-city" type="text" class="form-control" placeholder="Kochi" value="<%= city %>" >
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">Postcode / ZIP:</label>
+
+                                <input id="ship-pincode" type="text" class="form-control" placeholder="Your postal code" value="<%= pincode %>">
+
+                            </div>
+
+                            <div class="form-group col-md-6">
+
+                                <label class="title">State*</label>
+
+                                <select name="state" id="ship-state" state="<%= state %>" class="form-control">
+                                    <option value="">Select a state…</option><option value="AP">Andhra Pradesh</option><option value="AR">Arunachal Pradesh</option><option value="AS">Assam</option><option value="BR">Bihar</option><option value="CT">Chhattisgarh</option><option value="GA">Goa</option><option value="GJ">Gujarat</option><option value="HR">Haryana</option><option value="HP">Himachal Pradesh</option><option value="JK">Jammu and Kashmir</option><option value="JH">Jharkhand</option><option value="KA">Karnataka</option><option value="KL">Kerala</option><option value="MP">Madhya Pradesh</option><option value="MH">Maharashtra</option><option value="MN">Manipur</option><option value="ML">Meghalaya</option><option value="MZ">Mizoram</option><option value="NL">Nagaland</option><option value="OR">Orissa</option><option value="PB">Punjab</option><option value="RJ">Rajasthan</option><option value="SK">Sikkim</option><option value="TN">Tamil Nadu</option><option value="TS">Telangana</option><option value="TR">Tripura</option><option value="UK">Uttarakhand</option><option value="UP">Uttar Pradesh</option><option value="WB">West Bengal</option><option value="AN">Andaman and Nicobar Islands</option><option value="CH">Chandigarh</option><option value="DN">Dadar and Nagar Haveli</option><option value="DD">Daman and Diu</option><option value="DL">Delhi</option><option value="LD">Lakshadeep</option><option value="PY">Pondicherry (Puducherry)</option></select>
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group payment col-md-6">
+
+                                <button id="bill-address-submit" pkAddressId="<%= pkAddressId %>" type="submit" class="btn-order">Update</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+		</main><!-- end MAIN -->
+<% include footer.html %>

@@ -1,0 +1,160 @@
+<% include adminheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Admin Material Cost Calculation
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Admin Material Cost Calculation</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addProducts">
+                            <div class="form-horizontal" id="pkProductId" categoryId="">
+                                <div class="form-group">
+                                    <label for="productName" class="col-sm-2 control-label">Base Material</label>
+                                    <div class="col-sm-3">
+                                        <select name="selectMaterial" id="cost-selectMaterial" class="form-control">
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <button id="cost-update-basematerial" class="btn btn-primary">Select</button>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="cost-other-materials-container" style="display:none">
+                                    <div id="cost-gen-material">
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">If l < </label>
+
+                                        <div class="col-sm-3">
+                                            <input type="number" class="form-control" id="cost-length" placeholder="Length" value="">
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-4 control-label"></label>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                    <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">If b < </label>
+
+                                    <div class="col-sm-3">
+                                        <input type="number" class="form-control" id="cost-breadth" placeholder="Breadth" value="">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-4 control-label"></label>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">If h < </label>
+
+                                    <div class="col-sm-3">
+                                        <input type="number" class="form-control" id="cost-height" placeholder="Height" value="">
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-4 control-label"></label>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Cost</label>
+
+                                    <div class="col-sm-3">
+                                        <input type="number" class="form-control" id="cost-mat" placeholder="Cost" value="">
+                                    </div>
+                                    <div class="col-sm-5">
+                                    </div>
+                                </div>
+
+                                    <div class="form-group">
+                                        <label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Number of Qualities</label>
+
+                                        <div class="col-sm-3">
+                                            <input type="number" class="form-control" id="quality_num" placeholder="Number of qualities" value="">
+                                        </div>
+                                        <div class="col-sm-5">
+                                        </div>
+                                    </div>
+
+                                    <div id="quality_nums"></div>
+
+                                    <!--<div class="form-group">-->
+                                        <!--<label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Quality 1 = </label>-->
+
+                                        <!--<div class="col-sm-3">-->
+                                            <!--<input type="number" class="form-control q_perc" id="cost-mat" placeholder="Percentage" value="">-->
+                                            <!--<span>% Of </span><span class="currentcost"> </span>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-5">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="form-group">-->
+                                        <!--<label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Quality 2 = </label>-->
+
+                                        <!--<div class="col-sm-3">-->
+                                            <!--<input type="number" class="form-control q_perc" id="cost-mat" placeholder="Percentage" value="">-->
+                                            <!--<span>% Of </span><span class="currentcost"> </span>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-5">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="form-group">-->
+                                        <!--<label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Quality 3 = </label>-->
+
+                                        <!--<div class="col-sm-3">-->
+                                            <!--<input type="number" class="form-control q_perc" id="q_perc_3" placeholder="Percentage" value="">-->
+                                            <!--<span>% Of </span><span class="currentcost"> </span>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-sm-5">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button  isEdit="" productId="" id="materialcostInsert" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                                    </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html %>

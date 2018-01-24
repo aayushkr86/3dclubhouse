@@ -1,0 +1,137 @@
+<% include header.html %>  	
+		<!-- MAIN -->
+
+		<main class="site-main checkout">
+
+            <div class="container">
+
+                <ol class="breadcrumb-page">
+
+                    <li><a href="/">Home </a></li>
+
+                    <li class="active"><a href="#">checkout</a></li>
+
+                </ol>
+
+            </div>
+
+            <div class="container">
+
+                <form method="post" action="#">
+
+                    <h4 class="title-checkout">Billing Address</h4>
+
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">First Name*</label>
+
+                            <input name="firstName" type="text" class="form-control" id="ship-firstName" placeholder="Your name" value="<%= firstName %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">Last Name*</label>
+
+                            <input name="lastName" type="text" class="form-control" id="ship-lastName" placeholder="Your last name" value="<%= lastName %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">Email Addreess:</label>
+
+                            <input name="shipEmailId"  type="email" class="form-control" id="ship-emailId" placeholder="Type your email" value="<%= shipEmailId %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">Mobile number*</label>
+
+                            <input name="shipMobileNumber" id="ship-mobile" type="text" class="form-control" placeholder="10 digits format" value="<%= shipMobileNumber %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">Address:</label>
+
+                            <input name="address" id="ship-address" type="text" class="form-control" placeholder="Address" value="<%= address %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">City*</label>
+
+                            <input name="city" id="ship-city" type="text" class="form-control" placeholder="Kochi" value="<%= city %>" >
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">Postcode / ZIP:</label>
+
+                            <input name="pincode" id="ship-pincode" type="text" class="form-control" placeholder="Your postal code" value="<%= pincode %>">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label class="title">State*</label>
+
+                            <select name="state" id="ship-state" state="<%= state %>" class="form-control">
+                                <option value="">Select a state…</option><option value="AP">Andhra Pradesh</option><option value="AR">Arunachal Pradesh</option><option value="AS">Assam</option><option value="BR">Bihar</option><option value="CT">Chhattisgarh</option><option value="GA">Goa</option><option value="GJ">Gujarat</option><option value="HR">Haryana</option><option value="HP">Himachal Pradesh</option><option value="JK">Jammu and Kashmir</option><option value="JH">Jharkhand</option><option value="KA">Karnataka</option><option value="KL">Kerala</option><option value="MP">Madhya Pradesh</option><option value="MH">Maharashtra</option><option value="MN">Manipur</option><option value="ML">Meghalaya</option><option value="MZ">Mizoram</option><option value="NL">Nagaland</option><option value="OR">Orissa</option><option value="PB">Punjab</option><option value="RJ">Rajasthan</option><option value="SK">Sikkim</option><option value="TN">Tamil Nadu</option><option value="TS">Telangana</option><option value="TR">Tripura</option><option value="UK">Uttarakhand</option><option value="UP">Uttar Pradesh</option><option value="WB">West Bengal</option><option value="AN">Andaman and Nicobar Islands</option><option value="CH">Chandigarh</option><option value="DN">Dadar and Nagar Haveli</option><option value="DD">Daman and Diu</option><option value="DL">Delhi</option><option value="LD">Lakshadeep</option><option value="PY">Pondicherry (Puducherry)</option></select>
+
+                        </div>
+                    </div>
+                        <div class="row">
+
+                        <div class="form-group shipping col-md-6">
+
+                            <!--<h4 class="title-checkout">Shipping</h4>-->
+
+                            <!--<p>Flat Rate</p>-->
+
+                            <!--<p>Fixed $50.00</p>-->
+
+                            <h4 class="discount">Discount Codes</h4>
+
+                            <label class="title">Enter Your Coupon code:</label>
+
+                            <input id="coupon-text" type="text" class="form-control">
+
+                            <input type="button" value="Apply" id="apply-coupon" class="btn" />
+
+                        </div>
+
+                        <div class="form-group payment col-md-6">
+
+                            <!--<h4 class="title-checkout">Payment Method</h4>-->
+
+                            <!--<ul>-->
+
+                                <!--<li><label class="inline" ><input type="checkbox"><span class="input"></span>Paytm</label></li>-->
+
+                            <!--</ul>-->
+
+                            <span class="grand-total">Grand Total<span id="grant-total"></span></span>
+                            <br>
+                            <input id="place-order" type="submit" class="btn-order" value="Place Order Now" />
+
+                        </div>
+
+                        
+
+                    </div>
+
+                </form>
+
+            </div>
+
+		</main><!-- end MAIN -->
+		<!-- FOOTER -->
+<% include footer.html %>

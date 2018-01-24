@@ -1,0 +1,76 @@
+.img-col {
+    max-width: 120px;
+    min-width: 120px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.img-wrap {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    display: inline-block;
+    border: 1px #000000 solid;
+    font-size: 0;
+    object-fit: fill;
+}
+.img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+     padding: 5px 2px 2px;
+    color: #ff0000;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .2;
+    text-align: center;
+    font-size: 22px;
+    line-height: 10px;
+    border-radius: 50%;
+}
+.img-wrap:hover .close {
+    opacity: 1;
+}
+.img-wrap_responsive {
+    height: 98px;
+    width: 98px;
+    object-fit: scale-down;
+}
+
+
+#divLoading
+{
+    display : none;
+}
+#divLoading.show
+{
+    display : block;
+    position : fixed;
+    z-index: 100;
+    background-image : url('http://loadinggif.com/images/image-selection/7.gif');
+    background-color:#F5F1F1;
+    opacity : 0.9;
+    background-repeat : no-repeat;
+    background-position : center;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    top : 0;
+}
+#loadinggif.show
+{
+    left : 50%;
+    top : 50%;
+    position : absolute;
+    z-index : 101;
+    width : 32px;
+    height : 32px;
+    margin-left : -16px;
+    margin-top : -16px;
+}
+/*div.content {*/
+    /*width : 1000px;*/
+    /*height : 1000px;*/
+/*}*/

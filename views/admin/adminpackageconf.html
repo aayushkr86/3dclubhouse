@@ -1,0 +1,139 @@
+<% include adminheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Package Cost Configuration
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Package Cost Configuration</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addPackageConf" data-toggle="tab">Add</a></li>
+                        <li><a id="viewPackageConf" href="#_PackageConf" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addPackageConf">
+                            <div class="form-horizontal" id="pk_package_conf_id" packageConfId="<%= pk_package_conf_id %>">
+
+                                <div class="form-group">
+                                    <label for="min_length" class="col-sm-2 control-label">Min Length</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="min_length" placeholder="Min Length" value="<%= min_length %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="max_length" class="col-sm-2 control-label">Max Length</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="max_length" placeholder="Max Length" value="<%= max_length %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="min_breadth" class="col-sm-2 control-label">Min Breadth</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="min_breadth" placeholder="Min Breadth" value="<%= min_breadth %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="max_breadth" class="col-sm-2 control-label">Max Breadth</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="max_breadth" placeholder="Max Breadth" value="<%= max_breadth %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="min_height" class="col-sm-2 control-label">Min Height</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="min_height" placeholder="Min Height" value="<%= min_height %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="max_height" class="col-sm-2 control-label">Max Height</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="max_height" placeholder="Max Height" value="<%= max_height %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="package_cost" class="col-sm-2 control-label">Package Cost</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="package_cost" placeholder="Package Cost" value="<%= package_cost %>">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button isEdit="<%= isEdit %>" packageConfId="<%= pk_package_conf_id %>" id="packageconfInsert" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="_PackageConf">
+
+                            <div class="box">
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Min Length</th>
+                                            <th>Max Length</th>
+                                            <th>Min Breadth</th>
+                                            <th>Max Breadth</th>
+                                            <th>Min Height</th>
+                                            <th>Max Height</th>
+                                            <th>Package Cost</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="package-conf-list-container">
+
+                                        </tbody>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html %>

@@ -1,0 +1,177 @@
+<% include login_header.html %>
+<!-- MAIN -->
+<main class="site-main site-login">
+
+  <div class="container">
+
+  </div>
+
+  <div class="customer-login">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-6">
+
+          <h5 class="title-login">Log in to your account</h5>
+
+          <p class="p-title-login">Welcome to your account.</p>
+
+          <form method="POST" action="/account/login/form" class="login" >
+
+            <p class="form-row form-row-wide">
+
+              <label>Email Address:<span class="required"></span></label>
+
+              <input id="student-email" type="text" value="" name="emailId" placeholder="Type your username or email address" class="input-text">
+
+            </p>
+
+            <p class="form-row form-row-wide">
+
+              <label>Password:<span class="required"></span></label>
+
+              <input id="student-password" type="password" name="password" placeholder="************" class="input-text">
+
+            </p>
+
+            <!--<ul class="inline-block">-->
+
+            <!--<li><label class="inline"><input type="checkbox"><span class="input"></span>Remember me</label></li>-->
+
+            <!--</ul>-->
+
+            <!--<a href="#" class="forgot-password">Forgotten password?</a>                                <p class="form-row">-->
+
+            <input id="user-s-login" type="submit" value="Login" name="Login" class="button-submit">
+
+            </p>
+
+          </form>
+
+        </div>
+
+        <div class="col-sm-6 border-after">
+
+          <h5 class="title-login">Create an account</h5>
+
+          <p class="p-title-login">Personal infomation</p>
+
+          <form name="account_create" class="register" method="post" onsubmit="return validateForm()">
+
+            <p class="form-row form-row-wide">
+
+              <label>Fist name<span class="required">*</span></label>
+
+              <input id="reg-name" type="text" value="" name="name" placeholder="Fist name" class="input-text">
+
+            </p>
+
+            <p class="form-row form-row-wide">
+
+              <label>Last name<span class="required">*</span></label>
+
+              <input id="reg-lname" type="text" name="lastName" placeholder="Last name" class="input-text">
+
+            </p>
+
+
+            <p class="form-row form-row-wide">
+
+              <label>School name<span class="required">*</span></label>
+
+              <input id="reg-school" type="text" name="schoolName" placeholder="School name" class="input-text">
+
+            </p>
+            <p class="form-row form-row-wide">
+
+              <label>Mobile Number<span class="required"></span></label>
+
+              <input id="reg-mobile" type="text" name="mobilenumber" placeholder="Mobile Number" class="input-text">
+
+            </p>
+
+            <p class="form-row form-row-wide">
+
+              <label>Email Address<span class="required">*</span></label>
+
+              <input id="reg-emailId" type="email" name="emailId" placeholder="Email address" class="input-text">
+
+            </p>
+
+            <h5 class="title-login title-login-bottom">Login Information</h5>
+
+            <p class="form-row form-row-wide col-md-6 padding-left">
+
+              <label>Password:<span class="required"></span></label>
+
+              <input id="reg-password" type="password" name="password" class="input-text">
+
+            </p>
+
+            <p class="form-row form-row-wide col-md-12">
+
+              <label>Coupon Code<span class="required"></span></label>
+
+              <input id="reg-coupon" type="text" name="reg_coupon" class="input-text">
+
+            </p>
+
+            <div class="form-row form-row-wide col-md-6 padding-right">
+
+              <input type="checkbox" name="terms"> I accept the terms and conditions
+
+            </div>
+
+            <p class="form-row">
+
+              <input id="user-register" type="submit" value="Submit" class="button-submit">
+
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+<!-- end MAIN -->
+<script>
+    function validateForm(){
+        var x = document.forms["account_create"]["name"].value;
+        var coupon  = document.forms["account_create"]["reg_coupon"].value;
+        var term = document.forms["account_create"]["terms"].checked;
+        if (x == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        else if(term == false){
+            alert("Please accept the terms and conditions");
+            return false;
+        }else if(coupon.length > 0){
+            $.ajax({
+                url:'/cart/applycoupon/registration',
+                type:'POST',
+                data:{couponName:coupon},
+                success:function (data) {
+                    console.log("COUPON: "+data);
+                    console.log(data);
+                    if(data.success){
+                        return true;
+                    }else{
+                        alert("Invalid Coupon Code")
+                        return false;
+                    }
+                }
+            });
+            //return false;
+        }
+    }
+</script>
+<% include login_footer.html %>

@@ -1,0 +1,219 @@
+<% include header.html %>		
+		<!-- MAIN -->
+<!--{-->
+<!--pkProductId: 18,-->
+<!--fkCategoryId: 10,-->
+<!--productName: 'sheet',-->
+<!--productDesc: 'ubuyg',-->
+<!--defaultImage: 'https://s3.amazonaws.com/3dclubhouse/categories/category_default.png',-->
+<!--minHeight: 76,-->
+<!--minLength: 767,-->
+<!--minBreadth: 76,-->
+<!--minPrice: 989,-->
+<!--isProductBlocked: 0,-->
+<!--productCreatedTime: 2017-06-09T20:04:50.000Z,-->
+<!--categoryName: 'Sheets',-->
+<!--images: [ {
+       pkProductImageId: 21,
+       fkProductId: 20,
+       productImage: 'https://3dclubhouse.s3.amazonaws.com/products/1497808800982_ScreenShot2017-06-14at7.24.37PM.png',
+       productImageCreatedAt: 2017-06-18T18:00:04.000Z }] }-->
+
+		<main class="site-main">
+
+            <div class="container">
+
+                <ol class="breadcrumb-page">
+
+                    <li><a href="/">Home </a></li>
+
+                    <li class="active"><a href="#"><%= productName %></a></li>
+
+                </ol>
+
+            </div>
+
+            <div class="container">
+
+                <div class="product-content-single">
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-12 padding-right">
+
+                            <div class="product-media">
+
+                                <div class="image-thick-box">
+
+                                    <img id="img_zoom_prod" src="<%= defaultImage %>" alt="">
+
+                                    <!--<a href="#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>-->
+
+                                </div>
+
+                                <div class="product-preview image-small product_preview">
+
+                                    <div id="product-thumbnails" class="thumbnails_carousel owl-carousel nav-style4" data-nav="true" data-autoplay="false" data-dots="false" data-loop="true" data-margin="10" data-responsive='{"0":{"items":3},"480":{"items":5},"600":{"items":5},"1000":{"items":5}}'>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5 col-sm-6">
+
+                            <div class="product-info-main">
+
+                                <div class="product-name"><a href="/product"><%= productName %></a></div>
+                                <div class="product-description">
+                                    <%= productDesc %>
+                                </div>
+                                <div class="product-infomation">
+                                    <div id="item-dimensions" min_coefficient="<%= min_coefficient %>"  max_coefficient="<%= max_coefficient %>">
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Length</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <input type="number" step="1" min="1" max="50" name="length" value="<%= minLength %>" placeholder="Length" id="prod-detail-length" />
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Breadth</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <input type="number" step="1" min="1" max="50" name="breadth" value="<%= minBreadth %>" placeholder="Length" id="prod-detail-breadth" />
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Height</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <input type="number" step="1" min="1" max="50" name="height" value="<%= minHeight %>" placeholder="Height" id="prod-detail-height" />
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Material</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <select class="pro-mat" id="prod-detail-material-in" def_material="<%= def_material %>">
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Color</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <select id="prod-detail-color-mat">
+
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Quality</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <input id="prod-detail-quality" type="range" min="1" max="5" step="1" data-rangeslider value="<%= quality %>">
+                                            <output id="js-output"></output>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6">
+                                            <label for="name">Strength</label>
+                                        </div>
+                                        <div class="col-md-5 col-sm-6"  style="padding-bottom: 10px;">
+                                            <input id="prod-detail-strength" type="range" min="1" max="5" step="1" data-rangeslider value="<%= strength %>">
+                                            <output id="strength-output"></output>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+
+                            <div class="product-info-price">
+
+                                <div class="product-info-stock-sku">
+
+
+
+                                </div>
+
+                                <span class="price">
+
+                                    <ins id="product_price">Rs.<%= minPrice %></ins>
+
+                                    <!--<del>Rs.259.00</del>-->
+
+                                </span>
+
+                                <div class="quantity">
+
+                                    <h6 class="quantity-title">Quantity:</h6>
+
+                                    <div class="buttons-added">
+
+                                        <input id="product-quantity" type="text" value="1" title="Qty" class="input-text qty text" size="1">
+
+                                        <a href="#" class="sign plus"><i class="fa fa-plus"></i></a>
+
+                                        <a href="#" class="sign minus"><i class="fa fa-minus"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="single-add-to-cart">
+
+                                    <a id="add-to-cart" pkProductId="<%= pkProductId %>" baseMaterial="<%= baseMaterial %>" minPrice="<%= minPrice %>" productImages="<%= images %>" href="#" class="btn-add-to-cart">Add to cart</a>
+
+                                    <a isWished="<%= isWished %>" wishedProduct="<%= pkProductId %>" style="cursor: pointer" class="wishlist wishlist_products"><i id="product-detail-wish" isWished="<%= isWished %>" class="fa fa-heart-o" aria-hidden="true"></i>Add to Wishlist</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="tab-details-product">
+
+                    <ul class="box-tab nav-tab">
+
+                        <li class="active"><a data-toggle="tab" href="#tab-1">Description</a></li>
+
+                    </ul>
+
+                    <div class="tab-container">
+
+                        <div id="tab-1" class="tab-panel active">
+
+                            <div class="box-content">
+
+                                <%= productDesc %>
+                            </div>
+
+                        </div>
+
+
+                    </div>  
+
+                </div> 
+
+            </div>
+
+            <div class="block-recent-view">
+
+
+            </div>
+
+            
+
+		</main><!-- end MAIN -->
+		<!-- FOOTER -->
+<% include footer.html %>

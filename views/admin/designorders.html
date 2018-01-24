@@ -1,0 +1,169 @@
+<% include designheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Design Orders
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Products</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>
+                        <li><a id="view-products" href="#viewProducts" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addProducts">
+                            <form class="form-horizontal" id="pkProductId" categoryId="">
+                                <div class="form-group">
+                                    <label for="productName" class="col-sm-2 control-label">Item ID</label>
+                                     <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productName" placeholder="Item ID" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName" class="col-sm-2 control-label">Name</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productName" placeholder="Name" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productDesc" class="col-sm-2 control-label">Description</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="productDesc" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinLength" class="col-sm-2 control-label">Length</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productMinLength" placeholder="Length" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinHeight" class="col-sm-2 control-label">Height</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productMinHeight" placeholder="Height" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Breadth</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productMinBreadth" placeholder="Breadth" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Material</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productMinBreadth" placeholder="Material" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Color</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productMinBreadth" placeholder="Color" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Quality</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productMinBreadth" placeholder="Quality" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Uploaded Files</label>
+
+                                    <div class="col-sm-10" >
+                                        <div class="col-sm-2 img-col">
+                                            <a href="#">Link 1</a>
+                                        </div>
+
+                                        <div class="col-sm-2 img-col">
+                                            <a href="#">Link 2</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Status</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectStatus" id="selectStatus" class="form-control">
+                                            <option value="1">Pending</option>
+                                            <option value="2">Ongoing</option>
+                                            <option value="3">Rejected</option>
+                                            <option value="4">To Print</option>
+                                            <option value="5">Shipped</option>
+                                            <option value="6">Delivered</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button isEdit="" productId="" id="productInsert" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="viewProducts">
+
+                            <div class="box">
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Product Name</th>
+                                            <th>Category</th>
+                                            <th>Description</th>
+                                            <th>Min. L B H</th>
+                                            <th>Price</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="product-list-container">
+
+                                        </tbody>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html %>

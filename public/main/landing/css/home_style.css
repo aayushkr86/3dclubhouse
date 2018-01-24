@@ -1,0 +1,35 @@
+/* Google Fonts
+========================== */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
+
+/* css files
+====================== */
+@import url('/main/landing/css/bootstrap.min.css');
+@import url('/main/landing/css/material-design-iconic-font.min.css');
+@import url('/main/landing/css/custom-animate.css');
+@import url('/main/landing/css/ripple.min.css');
+@import url('/main/landing/css/venobox.css');
+@import url('/main/landing/css/slick.min.css');
+@import url('/main/landing/css/style2.css');
+@import url('/main/landing/css/responsive.css');
+
+body{
+	background: #e5e6e7;
+}
+.products-grid__item-container{
+	width: 65%;
+}
+
+.sub-title{
+	text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+.rounded-btn{
+	background: none;
+	margin-top: 2em;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px 18px 6px 18px;
+}

@@ -1,0 +1,67 @@
+
+
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.accordionInput {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordionLabel {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #2980b9;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #3498db;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.accordionInput:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+.accordionLabel::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.accordionInput[type=checkbox] + .accordionLabel::after {
+  content: "+";
+}
+.accordionInput[type=radio] + .accordionLabel::after {
+  content: "\25BC";
+}
+.accordionInput[type=checkbox]:checked + .accordionLabel::after {
+  transform: rotate(315deg);
+}
+.accordionInput[type=radio]:checked + .accordionLabel::after {
+  transform: rotateX(180deg);
+}

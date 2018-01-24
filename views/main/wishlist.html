@@ -1,0 +1,394 @@
+<% include header.html %>  		
+		<!-- MAIN -->
+
+		<main id="wish-main-container" class="site-main shopping-cart" wishInfo="<%= wishInfo %>">
+
+            <div class="container">
+
+                <ol class="breadcrumb-page">
+
+                    <li><a href="/">Home </a></li>
+
+                    <li class="active"><a href="#">Wishlist</a></li>
+
+                </ol>
+
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-9">
+
+                        <form class="form-cart">
+
+                            <div class="table-cart">
+
+                                <table class="table">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th class="tb-slno">Sl. No.</th>
+
+                                            <th class="tb-image"></th>
+
+                                            <th class="tb-product">Product Name</th>
+
+                                            <th class="tb-price">Unit Price</th>
+
+                                            <th class="tb-remove"></th>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody id="wishlist-container">
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                            <div class="cart-actions">
+
+                                <button type="submit" class="btn-continue">
+
+                                    <span>Continue Shopping</span>
+
+                                </button>
+
+                                <!--<button type="submit" class="btn-clean" >-->
+
+                                    <!--<span>Update Wishlist</span>-->
+
+                                <!--</button>-->
+
+                                <!--<button type="submit" class="btn-update" >-->
+
+                                    <!--<span>Clear Wishlist</span>-->
+
+                                <!--</button>-->
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-md-3 padding-left-5">
+
+                        <div class="order-summary">
+
+                            <h4 class="title-shopping-cart">Wishlist Summary</h4>
+
+                            <div class="checkout-element-content">
+
+                                <span class="order-left">Subtotal:<span id="wish-subtotal">Rs.0</span></span>
+
+                                <span class="order-left">Shipping:<span>Free Shipping</span></span>
+
+                                <span class="order-left">Total:<span id="wish-total">Rs.0</span></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="block-recent-view">
+
+                <!--<div class="container">-->
+
+                    <!--<div class="title-of-section">You may be also interested</div>-->
+
+                    <!--<div class="owl-carousel nav-style2 border-background equal-container" data-nav="true" data-autoplay="false" data-dots="false" data-loop="true" data-margin="0" data-responsive='{"0":{"items":1},"480":{"items":2},"600":{"items":3},"1000":{"items":6}}'>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r1.jpg" alt="r1"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<span class="onsale">-50%</span>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo">-->
+
+                                    <!--<div class="product-name"><a href="/product">Women Hats</a></div>-->
+
+                                    <!--<span class="price">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                        <!--<del>Rs.259.00</del>-->
+
+                                    <!--</span>-->
+
+                                    <!---->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r2.jpg" alt="r2"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<span class="onnew">new</span>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo"> -->
+
+                                    <!--<div class="product-name"><a href="/product">Basketball Sports Shoes</a></div>-->
+
+                                    <!--<span class="price price-dark">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                    <!--</span>-->
+
+                                    <!---->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r3.jpg" alt="r3"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo">-->
+
+                                    <!--<div class="product-name"><a href="/product">Dark Green Prada Sneakers</a></div>-->
+
+                                    <!--<span class="price price-dark">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                    <!--</span>-->
+
+                                    <!---->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r4.jpg" alt="r4"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo">-->
+
+                                    <!--<div class="product-name"><a href="/product">Clutches in Men's Bags for Men</a></div>-->
+
+                                    <!--<span class="price price-dark">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                    <!--</span>-->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r5.jpg" alt="r5"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<span class="onsale">-50%</span>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo">-->
+
+                                    <!--<div class="product-name"><a href="/product">Parka With a Hood</a></div>-->
+
+                                    <!--<span class="price">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                        <!--<del>Rs.259.00</del>-->
+
+                                    <!--</span>-->
+
+                                    <!---->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                        <!--<div class="product-item style1">-->
+
+                            <!--<div class="product-inner equal-elem">-->
+
+                                <!--<div class="product-thumb">-->
+
+                                    <!--<div class="thumb-inner">-->
+
+                                        <!--<a href="#"><img src="/main/images/home1/r6.jpg" alt="r6"></a>-->
+
+                                    <!--</div>-->
+
+                                    <!--<a href="#" class="quick-view">Quick View</a>-->
+
+                                <!--</div>-->
+
+                                <!--<div class="product-innfo">-->
+
+                                    <!--<div class="product-name"><a href="/product">Smartphone MTK6737 Quad Core.</a></div>-->
+
+                                    <!--<span class="price price-dark">-->
+
+                                        <!--<ins>Rs.229.00</ins>-->
+
+                                    <!--</span>-->
+
+                                    <!--<div class="group-btn-hover style2">-->
+
+                                        <!--<a href="#" class="add-to-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>-->
+
+                                        <!---->
+
+                                        <!--<a href="#" class="wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+                        <!--</div>-->
+
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            </div>
+
+            
+
+		</main><!-- end MAIN -->
+<% include footer.html %>

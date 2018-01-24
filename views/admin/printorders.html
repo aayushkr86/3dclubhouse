@@ -1,0 +1,155 @@
+<% include printheader.html %>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Orders
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Products</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <!--<li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>-->
+                        <li class="active"><a id="view-products" href="#viewProducts" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!--<div class="active tab-pane" id="addProducts">-->
+                        <!--<form class="form-horizontal" id="pkProductId" categoryId="">-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productName" class="col-sm-2 control-label">Item ID</label>-->
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="text" class="form-control" id="productName" placeholder="Item ID" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label id="fkCategoryId" categoryId="" categoryName="" for="selectCategory" class="col-sm-2 control-label">Category</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<select name="selectCategory" id="selectCategory" class="form-control">-->
+                        <!--</select>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                        <!--<label for="productName" class="col-sm-2 control-label">Name</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="text" class="form-control" id="productName" placeholder="Name" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productDesc" class="col-sm-2 control-label">Description</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<textarea class="form-control" id="productDesc" placeholder="Description"></textarea>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinLength" class="col-sm-2 control-label">Length</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="number" class="form-control" id="productMinLength" placeholder="Length" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinHeight" class="col-sm-2 control-label">Height</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="number" class="form-control" id="productMinHeight" placeholder="Height" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinBreadth" class="col-sm-2 control-label">Breadth</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="number" class="form-control" id="productMinBreadth" placeholder="Breadth" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinBreadth" class="col-sm-2 control-label">Material</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="text" class="form-control" id="productMinBreadth" placeholder="Material" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinBreadth" class="col-sm-2 control-label">Color</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="text" class="form-control" id="productMinBreadth" placeholder="Color" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinBreadth" class="col-sm-2 control-label">Quality</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<input type="text" class="form-control" id="productMinBreadth" placeholder="Quality" value="">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="productMinBreadth" class="col-sm-2 control-label">Status</label>-->
+
+                        <!--<div class="col-sm-10">-->
+                        <!--<select name="selectStatus" id="selectStatus" class="form-control">-->
+                        <!--<option value="1">Pending</option>-->
+                        <!--<option value="2">Ongoing</option>-->
+                        <!--<option value="3">Rejected</option>-->
+                        <!--<option value="4">To Print</option>-->
+                        <!--<option value="5">Shipped</option>-->
+                        <!--<option value="6">Delivered</option>-->
+                        <!--</select>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                        <!--<div class="col-sm-offset-2 col-sm-10">-->
+                        <!--<button isEdit="" productId="" id="productInsert" class="btn btn-primary">Submit</button>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <!--</form>-->
+                        <!--</div>-->
+                        <!-- /.tab-pane -->
+                        <div class="active tab-pane" id="viewProducts">
+                            <!--<div class=btn-group-horizontal><button class="btn btn-default"type=button>Top</button> <button class="btn btn-default"type=button>Middle</button> <button class="btn btn-default"type=button>Bottom</button></div>-->
+                            <!--<br>-->
+                            <div class="box">
+                                <!-- /.box-header -->
+
+                                <div class="box-body">
+
+                                    <div id="print-order-list" class="col-md-12">
+                                        <!--<div class="box box-success panel"><div class="box-header with-border"><h4 class=box-title><a aria-expanded=true class=collapsed data-parent=#accordion data-toggle=collapse href=#collapseThree>Collapsible Group Success</a></h4><select id=selectStatus name=selectStatus style=float:right><option value=1>Pending<option value=2>Ongoing<option value=3>Rejected<option value=4>To Print<option value=5>Shipped<option value=6>Delivered</select></div><div class="collapse panel-collapse"aria-expanded=false id=collapseThree style=height:0><div class=box-body><div class="box box-solid"><div class="box-header with-border"><h3 class=box-title>Unordered List</h3></div><div class=box-body><ul><li>Lorem ipsum dolor sit amet<li>Consectetur adipiscing elit<li>Integer molestie lorem at massa<li>Facilisis in pretium nisl aliquet<li>Nulla volutpat aliquam velit<ul><li>Phasellus iaculis neque<li>Purus sodales ultricies<li>Vestibulum laoreet porttitor sem<li>Ac tristique libero volutpat at</ul><li>Faucibus porta lacus fringilla vel<li>Aenean sit amet erat nunc<li>Eget porttitor lorem</ul></div></div><div class="box box-solid"><div class="box-header with-border"><h3 class=box-title>Unordered List</h3></div><div class=box-body><ul><li>Lorem ipsum dolor sit amet<li>Consectetur adipiscing elit<li>Integer molestie lorem at massa<li>Facilisis in pretium nisl aliquet<li>Nulla volutpat aliquam velit<ul><li>Phasellus iaculis neque<li>Purus sodales ultricies<li>Vestibulum laoreet porttitor sem<li>Ac tristique libero volutpat at</ul><li>Faucibus porta lacus fringilla vel<li>Aenean sit amet erat nunc<li>Eget porttitor lorem</ul></div></div></div></div></div>-->
+                                    </div>
+
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminprintfooter.html %>

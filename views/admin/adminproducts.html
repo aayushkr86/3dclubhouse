@@ -1,0 +1,251 @@
+<% include adminheader.html %>
+<!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Products
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Products</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#addProducts" data-toggle="tab">Add</a></li>
+                        <li><a id="view-products" href="#viewProducts" data-toggle="tab">View All</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="addProducts">
+                            <div class="form-horizontal" id="pkProductId" categoryId="<%= pkProductId %>">
+                                <div class="form-group">
+                                    <label id="fkCategoryId" categoryId="<%= fkCategoryId %>" categoryName="<%= categoryName %>" for="selectCategory" class="col-sm-2 control-label">Category</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectCategory" id="selectCategory" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productName" class="col-sm-2 control-label">Name</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="productName" placeholder="Name" value="<%= productName %>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productDesc" class="col-sm-2 control-label">Description</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="productDesc" placeholder="Description"><%= productDesc %></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinLength" class="col-sm-2 control-label">Min. Length</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" min="1" max="50" class="form-control" id="productMinLength" placeholder="Min. Length" value="<%= minLength %>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinHeight" class="col-sm-2 control-label">Min Height</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" min="1" max="50" class="form-control" id="productMinHeight" placeholder="Min Height" value="<%= minHeight %>">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productMinBreadth" class="col-sm-2 control-label">Min. Breadth</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" min="1" max="50" class="form-control" id="productMinBreadth" placeholder="Min. Breadth" value="<%= minBreadth %>">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="productFilament" class="col-sm-2 control-label">Filament Length</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productFilament" placeholder="Filament Length" value="<%= filamentLength %>">
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <label for="productPrintTime" class="col-sm-2 control-label">PrintTime</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productPrintTime" placeholder="PrintTime" value="<%= printTime %>">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label id="fk_variable_code" fk_variable_code="<%= fk_variable_code %>" variable_code="<%= fk_variable_code %>" for="selectVariableCode" class="col-sm-2 control-label">VariableCode</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectVariableCode" id="selectVariableCode" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productStrength" class="col-sm-2 control-label">Strength</label>
+
+                                    <div class="col-sm-10">
+                                        <!--<input disabled type="number" class="form-control" id="productStrength" placeholder="Strength" value="<%= strength %>">-->
+                                        <input disabled id="productStrength" type="range" min="1" max="5" step="1" data-rangeslider="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productQuality" class="col-sm-2 control-label">Product Quality</label>
+
+                                    <div class="col-sm-10">
+                                        <!--<input disabled type="number" class="form-control" id="productStrength" placeholder="Strength" value="<%= strength %>">-->
+                                        <input disabled id="productQuality" type="range" min="1" max="5" step="1" data-rangeslider="">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="selectMaterial" class="col-sm-2 control-label">Default Material</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectMaterial" id="selectMaterial" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label id="fk_pp_id" fk_pp_id="<%= fk_pp_id %>" fk_pp_id="<%= fk_pp_id %>" for="selectPPId" class="col-sm-2 control-label">Post Processing</label>
+
+                                    <div class="col-sm-10">
+                                        <select name="selectPPId" id="selectPPId" class="form-control">
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productMinCoefficient" class="col-sm-2 control-label">Min Coefficient</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productMinCoefficient" placeholder="Min Coefficient" value="<%= min_coefficient %>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="productMaxCoefficient" class="col-sm-2 control-label">Max Coefficient</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="productMaxCoefficient" placeholder="Max Coefficient" value="<%= max_coefficient %>">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">-->
+                                    <!--<label for="productMinPrice" class="col-sm-2 control-label">Default Price</label>-->
+
+                                    <!--<div class="col-sm-10">-->
+                                        <!--<input type="number" class="form-control" id="productMinPrice" placeholder="Default Price" value="<%= minPrice %>">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <div id="existingImages-container" class="form-group">
+                                    <label class="col-sm-2 control-label">Uploaded Images</label>
+
+                                    <div id="existingImages" class="col-sm-10" >
+                                        <!--<div class="col-sm-2 img-col">-->
+                                            <!--<div class="img-wrap">-->
+                                                <!--<span class="close">&times;</span>-->
+                                                <!--<img class="img-wrap_responsive" src="https://www.phoca.cz/images/stories/gimp/3-save-icons.png" data-id="123">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="col-sm-2 img-col">-->
+                                        <!--<div class="img-wrap">-->
+                                            <!--<span class="close">&times;</span>-->
+                                            <!--<img class="img-wrap_responsive" src="https://www.designbrooklyn.com/images/opt/gimp_fileextension.png" data-id="103">-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label id="productimg-loaded" productImages="<%= productImages %>" for="productImagesArray" class="col-sm-2 control-label">Choose Files (Maximum File Size is 3MB)</label>
+
+                                    <div class="col-sm-10">
+                                        <div id="productImagesArray">Upload</div>
+                                        <!--<div class="ajax-upload-dragdrop" style="vertical-align:top;">-->
+                                            <!--<div id="fileuploader" class="upload" style="position: relative; overflow: hidden; cursor: default;">Upload-->
+                                            <!--&lt;!&ndash;<form enctype="multipart/form-data" style="margin: 0px; padding: 0px;">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<input type="file" id="productImagesArray" name="uploadfile[]" multiple="" style="position: absolute; cursor: pointer; top: 0px; width: 64px; height: 25px; left: 0px; z-index: 100; opacity: 0;"></form>&ndash;&gt;-->
+                                        <!--</div><span><b>Drag &amp; Drop Files</b></span></div><div id="mulitplefileuploader" style="display: none;">Upload</div><div></div>-->
+                                    </div>
+                                    <!-- /col-sm-10 -->
+                                </div>
+                                <br><br>
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button isEdit="<%= isEdit %>" productId="<%= pkProductId %>" id="productInsert" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="viewProducts">
+
+                            <div class="box">
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Product Name</th>
+                                            <th>Category</th>
+                                            <th>Description</th>
+                                            <th>Min. L B H</th>
+                                            <th>Price</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="product-list-container">
+
+                                        </tbody>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.tab-pane -->
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include adminfooter.html %>
